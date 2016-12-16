@@ -15,6 +15,6 @@ angular
 		// to be accessible from outside the service
 		return {
 			getCribs: getCribs
-		};
-		
-	});
+		};    
+				
+});

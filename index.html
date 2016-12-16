@@ -61,7 +61,7 @@
 
 		</div>
 		<!-- Real Estate Listings Items-->
-		<div class="col-sm-4" ng-repeat="crib in cribs">
+		<div class="col-sm-4" ng-repeat="crib in cribs | cribsFilter:priceInfo">
 			<div class="thumbnail">
 				<img ng-src="images/{{ crib.image}}.jpg" alt="">
 
@@ -102,5 +102,6 @@
 <script src="app.js"></script>
 <script src="scripts/cribsController.js"></script>
 <script src="scripts/cribsFactory.js"></script>
+<script src="scripts/cribsFilter.js"></script>
 
 </html>
