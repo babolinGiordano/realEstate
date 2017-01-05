@@ -27,6 +27,26 @@ angular
     }
   }
 
+  //Apro in modifica l'elemento passato
+  $scope.editCrib = function(crib) {
+    $scope.editListing = true;
+    $scope.existingListing = crib;
+  }
+
+  //Salvo le modifiche (finte) e chiudo la dialog
+  $scope.saveCribEdit = function(listing) {
+    $scope.existingListing = {};
+    $scope.editListing = false;
+  }
+
+  //Elimino l'elemento passato dalla lista 
+  $scope.deleteCrib = function(existingListing) {
+    const index = $scope.cribs.indexOf(existingListing);
+    $scope.cribs.splice(index, 1);
+    $scope.existingListing = {};
+    $scope.editListing = false;
+  }
+
   //Recupero tutti gli oggetti presenti in cribs
   cribsFactory.getCribs().success(function(data) {
     $scope.cribs = data;
