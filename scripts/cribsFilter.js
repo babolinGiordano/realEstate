@@ -1,6 +1,6 @@
 angular
-	.module('cribsApp')
-	.filter('cribsFilter', function() {
+.module('cribsApp')
+.filter('cribsFilter', function() {
 
 		// The filter needs to return a function
 		// that does the actual filtering
